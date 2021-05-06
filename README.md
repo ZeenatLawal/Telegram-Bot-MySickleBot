@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Telegram-Bot-SickleBot
+# Telegram-Bot-MySickleBot
 
-> SickleBot is a telegram bot where users can get health tips on Sickle Cell Anaemia. Users can get healthy living, harmful things, help a loved one and when to get medical care tips. Built with Ruby.
+> MySickleBot is a telegram bot where users can get health tips on Sickle Cell Anaemia. Users can get healthy living, harmful things, help a loved one and when to get medical care tips. Built with Ruby.
 
 ![screenshot](./app_screenshot.png)
 
@@ -45,7 +45,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ZeenatLawal/Telegram-Bot-SickleBot/issues/).
+Feel free to check the [issues page](https://github.com/ZeenatLawal/Telegram-Bot-MySickleBot/issues/).
 
 ## Show your support
 
