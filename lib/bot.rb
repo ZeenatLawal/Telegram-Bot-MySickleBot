@@ -39,15 +39,15 @@ class Bot
             \n - #{tips_content[8]}
             \n - #{tips_content[9]}")
 
-          when '/harmful_things'
-            bot.api.send_message(chat_id: message.chat.id, text: "#{tips_title[2]} - List of things to stay away from
-              \n - #{tips_content[10]}
-              \n - #{tips_content[11]}
-              \n - #{tips_content[12]}
-              \n - #{tips_content[13]}
-              \n - #{tips_content[14]}
-              \n - #{tips_content[15]}
-              \n - #{tips_content[16]}")
+        when '/harmful_things'
+          bot.api.send_message(chat_id: message.chat.id, text: "#{tips_title[2]} - List of things to stay away from
+            \n - #{tips_content[10]}
+            \n - #{tips_content[11]}
+            \n - #{tips_content[12]}
+            \n - #{tips_content[13]}
+            \n - #{tips_content[14]}
+            \n - #{tips_content[15]}
+            \n - #{tips_content[16]}")
   
         when '/bye'
           bot.api.send_message(chat_id: message.chat.id, text: "Bye, #{message.from.first_name} and take care.")
