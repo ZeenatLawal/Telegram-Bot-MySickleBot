@@ -13,9 +13,15 @@ class Bot
         case message.text
         when '/start'
   
-          bot.api.send_message(chat_id: message.chat.id, text: "Hello #{message.from.first_name}, I am MySickleBot a bot that gives health tips on Sickle Cell Anaemia. How can I help you today?")
+          bot.api.send_message(chat_id: message.chat.id, text: "Hello #{message.from.first_name}, I am MySickleBot a bot that gives health tips on Sickle Cell Anaemia. How can I help you today? To see the list of commands run /command.")
+
+        when '/welcome'
   
-          bot.api.send_message(chat_id: message.chat.id, text: "Here are the list of commands you can run:
+          bot.api.send_message(chat_id: message.chat.id, text: "Hello #{message.from.first_name}, I am MySickleBot a bot that gives health tips on Sickle Cell Anaemia. How can I help you today? To see the list of commands run /commands.")
+
+        when '/commands'    
+          bot.api.send_message(chat_id: message.chat.id, text: "Here is the list of commands you can run:
+            \n /welcome: Welcomes the user.
             \n /helpful_things: List of ways to take care of yourself.
             \n /harmful_things: List of things to stay away from.
             \n /dealing_with_pain: Good guidelines to follow when in pain.
@@ -25,7 +31,13 @@ class Bot
             \n /bye: Says goodbye ")
   
         when '/helpful_things'
-          bot.api.send_message(chat_id: message.chat.id, text: "#{tips_content[2]}")
+          bot.api.send_message(chat_id: message.chat.id, text: "#{tips_title[1]}
+            \n - #{tips_content[4]}
+            \n - #{tips_content[5]}
+            \n - #{tips_content[6]}
+            \n - #{tips_content[7]}
+            \n - #{tips_content[8]}
+            \n - #{tips_content[9]}")
   
         when '/bye'
           bot.api.send_message(chat_id: message.chat.id, text: "Bye, #{message.from.first_name} and take care.")
