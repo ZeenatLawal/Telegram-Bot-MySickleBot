@@ -2,8 +2,11 @@ require 'telegram/bot'
 require_relative '../lib/health_tips'
 require './token'
 
+# rubocop: disable Layout/LineLength
+# rubocop: disable Metrics/CyclomaticComplexity, Metrics/BlockLength
+# rubocop: disable Metrics/AbcSize, Metrics/MethodLength
+
 class Bot
-  
   def initialize
     tips = Scrapper::Health.new
     tips_title = tips.tips_heading
@@ -12,11 +15,13 @@ class Bot
       bot.listen do |message|
         case message.text
         when '/start'
-          bot.api.send_message(chat_id: message.chat.id, text: "Hello #{message.from.first_name}, I am MySickleBot a bot that gives health tips on Sickle Cell Anaemia. How can I help you today? To see the list of commands run /commands.")
+          bot.api.send_message(chat_id: message.chat.id,
+                               text: "Hello #{message.from.first_name}, I am MySickleBot a bot that gives health tips on Sickle Cell Anaemia. How can I help you today? To see the list of commands run /commands.")
 
         when '/welcome'
-            bot.api.send_message(chat_id: message.chat.id, text: "Hello #{message.from.first_name}, I am MySickleBot a bot that gives health tips on Sickle Cell Anaemia. How can I help you today? To see the list of commands run /commands.")
-          
+          bot.api.send_message(chat_id: message.chat.id,
+                               text: "Hello #{message.from.first_name}, To see the list of commands run /commands.")
+
         when '/helpful_things'
           bot.api.send_message(chat_id: message.chat.id, text: "#{tips_title[1]} - List of ways to take care of yourself
             \n - #{tips_content[4]}
@@ -35,14 +40,14 @@ class Bot
             \n - #{tips_content[14]}
             \n - #{tips_content[15]}
             \n - #{tips_content[16]}")
-            
+
         when '/dealing_with_pain'
           bot.api.send_message(chat_id: message.chat.id, text: "#{tips_title[0]} - Good guidelines to follow when in pain
             \n - #{tips_content[0]}
             \n - #{tips_content[1]}
             \n - #{tips_content[2]}
             \n - #{tips_content[3]}")
-          
+
         when '/how_to_help'
           bot.api.send_message(chat_id: message.chat.id, text: "#{tips_title[3]} - List of ways you can provide support to a loved one
             \n - #{tips_content[17]}
@@ -63,8 +68,8 @@ class Bot
             \n - #{tips_content[29]}
             \n - #{tips_content[30]}
             \n - #{tips_content[31]}")
-            
-        when '/commands'    
+
+        when '/commands'
           bot.api.send_message(chat_id: message.chat.id, text: "Here is the list of commands you can run:
             \n /welcome: Welcomes the user.
             \n /helpful_things: List of ways to take care of yourself.
@@ -73,7 +78,7 @@ class Bot
             \n /how_to_help: List of ways you can provide support to a loved one.
             \n /get_care: Possible problems caused by SCD that needs medical attention right away.
             \n /commands: Displays the list of commands.
-            \n /bye: Says goodbye 
+            \n /bye: Says goodbye
             \n /webmd: To get more info visit the website where the tips were gotten from")
 
         when '/bye'
@@ -84,5 +89,9 @@ class Bot
         end
       end
     end
-  end  
+  end
 end
+
+# rubocop: enable Layout/LineLength
+# rubocop: enable Metrics/CyclomaticComplexity, Metrics/BlockLength
+# rubocop: enable Metrics/AbcSize, Metrics/MethodLength
