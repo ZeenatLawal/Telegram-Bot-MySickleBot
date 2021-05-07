@@ -48,6 +48,13 @@ class Bot
             \n - #{tips_content[14]}
             \n - #{tips_content[15]}
             \n - #{tips_content[16]}")
+
+        when '/dealing_with_pain'
+          bot.api.send_message(chat_id: message.chat.id, text: "#{tips_title[0]} - Good guidelines to follow when in pain
+            \n - #{tips_content[0]}
+            \n - #{tips_content[1]}
+            \n - #{tips_content[2]}
+            \n - #{tips_content[3]}")
   
         when '/bye'
           bot.api.send_message(chat_id: message.chat.id, text: "Bye, #{message.from.first_name} and take care.")
