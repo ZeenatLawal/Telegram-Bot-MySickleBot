@@ -50,6 +50,19 @@ class Bot
             \n - #{tips_content[19]}
             \n - #{tips_content[20]}
             \n - #{tips_content[21]}")
+
+        when '/get_care'
+          bot.api.send_message(chat_id: message.chat.id, text: "#{tips_title[5]} - Possible problems caused by SCD that needs medical attention right away
+            \n - #{tips_content[22]}
+            \n - #{tips_content[23]}
+            \n - #{tips_content[24]}
+            \n - #{tips_content[25]}
+            \n - #{tips_content[26]}
+            \n - #{tips_content[27]}
+            \n - #{tips_content[28]}
+            \n - #{tips_content[29]}
+            \n - #{tips_content[30]}
+            \n - #{tips_content[31]}")
             
         when '/commands'    
           bot.api.send_message(chat_id: message.chat.id, text: "Here is the list of commands you can run:
@@ -61,10 +74,13 @@ class Bot
             \n /get_care: Possible problems caused by SCD that needs medical attention right away.
             \n /commands: Displays the list of commands.
             \n /bye: Says goodbye 
-            \n /webmd: Link to the website where the tips were gotten from")
+            \n /webmd: To get more info visit the website where the tips were gotten from")
 
         when '/bye'
           bot.api.send_message(chat_id: message.chat.id, text: "Bye, #{message.from.first_name} and take care.")
+
+        when '/webmd'
+          bot.api.send_message(chat_id: message.chat.id, text: 'To get more info visit: https://www.webmd.com/a-to-z-guides/living-with-sickle-cell')
         end
       end
     end
