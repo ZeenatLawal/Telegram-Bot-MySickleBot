@@ -2,29 +2,40 @@ require 'nokogiri'
 require 'httparty'
 require 'byebug'
 
-class Scrapper
+class Health
+
+  def initialize
+    @tips = []
+    @titles = []
+  end
+
+  def health_tips_title
+    @titles << tips_heading
+  end
+
   def health_tips
-    tips = []
+    @tips << tips_content
+  end
+
+  def tips_heading
+    titles_arr = []
     url = "https://www.webmd.com/a-to-z-guides/living-with-sickle-cell"
     unparsed_page = HTTParty.get(url)
     parsed_page = Nokogiri::HTML(unparsed_page)
-    title1 = parsed_page.css('h2#1-2')
-    title2 = parsed_page.css('h2#2-3')
-    title3 = parsed_page.css('h2#2-4')
-    title4 = parsed_page.css('h2#3-5')
-    title5 = parsed_page.css('h2#3-7')
-    tip_lists = parsed_page.xpath("//section//ul//li").each do |tip_list|
-      tips << tip_list.text
+    parsed_page.xpath("//section//h2").each do |title|
+      titles_arr << title.text
     end
-  
-    deal = []
-    i = 0
-    while i < 4
-      deal << tips[i]
-      i += 1
-    end
-    puts deal[2]
+    titles_arr 
   end
-  
-  health_tips
+
+  def tips_content
+    tips_arr = []
+    url = "https://www.webmd.com/a-to-z-guides/living-with-sickle-cell"
+    unparsed_page = HTTParty.get(url)
+    parsed_page = Nokogiri::HTML(unparsed_page) 
+    parsed_page.xpath("//section//ul//li").each do |tip_list|
+      tips_arr << tip_list.text
+    end
+    tips_arr
+  end
 end
