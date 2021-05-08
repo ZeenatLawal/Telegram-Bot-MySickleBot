@@ -2,11 +2,12 @@
 
 # Telegram-Bot-MySickleBot
 
-> MySickleBot is a telegram bot where users can get health tips on Sickle Cell Anaemia. Users can get healthy living, harmful things, help a loved one and when to get medical care tips. Built with Ruby.
+> Ruby Capstone Project (MySickleBot - A Telegram Bot)
+ It is a simple bot that gives health tips on Sickle Cell Anaemia, built following the original project specifications from [Microverse Ruby Capstone Project - Build your own bot](https://www.notion.so/Build-your-own-bot-ebd0d7ac5da240e5987720bdc83f38fa)
 
-![screenshot](./app_screenshot.png)
+![screenshot](Screenshot.png)
 
-Additional description about the project and its features.
+MySickleBot is a telegram bot where users can get health tips on Sickle Cell Anaemia. Users can get healthy living, harmful things, help a loved one and when to get medical care tips. Built with Ruby.
 
 ## Built With
 
