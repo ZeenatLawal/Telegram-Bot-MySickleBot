@@ -20,16 +20,18 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-### Setup
+- Web browser (e.g. Google chrome or Firefox)
+- Code Editor (e.g. Vscode or Atom)
 
-### Install
+### Cloning the repo
 
-### Usage
+- Copy this link [Telegram-Bot-MySickleBot](https://github.com/ZeenatLawal/Telegram-Bot-MySickleBot.git)
+- Open your terminal or command line in the folder you want the project to be
+- Run the command git clone with the link you copied above `git clone https://github.com/ZeenatLawal/Telegram-Bot-MySickleBot.git`
 
 ### Run tests
 
-### Deployment
-
+- Run the following command `bundle exec rspec` or `rspec` in the terminal to run all tests in the directory
 
 
 ## Author
