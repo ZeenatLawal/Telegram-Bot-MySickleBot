@@ -39,7 +39,9 @@ To get a local copy up and running follow these simple example steps.
 - Run the command git clone with the link you copied above `git clone https://github.com/ZeenatLawal/Telegram-Bot-MySickleBot.git`
 - Once you have a local copy, run `bundle install` to install all gemfiles in the directory
 - Talk to @BotFather on Telegram to create your bot
-- Get your token from the BotFather and put it in the code
+- Get your token from the BotFather
+- Create a token.rb file in the root directory
+- Insert the following line inside the token.rb file: TOKEN = 'Paste the token you got from the BotFather here'
 - Run bin/main.rb to get your bot up and running
 
 ### Run tests
