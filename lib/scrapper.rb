@@ -4,6 +4,22 @@ require 'byebug'
 
 module Scrapper
   class Health
+    def initialize
+      @tips = []
+      @titles = []
+    end
+  
+    def health_tips_title
+      @titles << tips_heading
+      @titles = @titles.flatten
+    end
+  
+    def health_tips
+      @tips << tips_content
+      @tips = tips_content.flatten
+    end
+
+    private
     def tips_heading
       titles_arr = []
       url = 'https://www.webmd.com/a-to-z-guides/living-with-sickle-cell'

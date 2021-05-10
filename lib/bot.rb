@@ -9,8 +9,8 @@ require './token'
 class Bot
   def initialize
     tips = Scrapper::Health.new
-    tips_title = tips.tips_heading
-    tips_content = tips.tips_content
+    tips_title = tips.health_tips_title
+    tips_content = tips.health_tips
     Telegram::Bot::Client.run(TOKEN) do |bot|
       bot.listen do |message|
         case message.text
