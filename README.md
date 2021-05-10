@@ -69,6 +69,7 @@ Give a ⭐️ if you like this project!
 
 - [Safa Aballagh](https://github.com/safafa) and [Francis Uloko](https://github.com/francisuloko)
 - Coding Partner [Peter MX](https://github.com/blakbox23)
+- My StandUp Team
 - Inspiration got from all Sickle cell warriors (Myself included:smile:)
 
 ## 📝 License
