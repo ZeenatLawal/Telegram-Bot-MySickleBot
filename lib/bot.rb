@@ -1,5 +1,5 @@
 require 'telegram/bot'
-require_relative '../lib/health_tips'
+require_relative '../lib/scrapper'
 require './token'
 
 # rubocop: disable Layout/LineLength
