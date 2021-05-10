@@ -18,7 +18,7 @@ MySickleBot is a telegram bot where users can get health tips on Sickle Cell Ana
 - Launch the telegram app
 - Search for @MySickleBot
 - Click start to get started
-- Run /commands to get the list of commands
+- Run `/commands` to get the list of commands
 - Select the type of health tip you want to read
 
 
