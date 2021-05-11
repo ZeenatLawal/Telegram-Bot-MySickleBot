@@ -1,4 +1,4 @@
-require './lib/scrapper
+require './lib/scrapper'
 
 module Scrapper
   describe Health do
