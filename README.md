@@ -1,5 +1,3 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Telegram-Bot-MySickleBot
 
 > Ruby Capstone Project (MySickleBot - A Telegram Bot)
