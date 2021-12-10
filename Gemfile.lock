@@ -30,15 +30,26 @@ GEM
     mime-types-data (3.2021.0225)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
     nokogiri (1.11.3-x64-mingw32)
       racc (~> 1.4)
     racc (1.5.2)
+    rack (2.2.3)
+    rack-protection (2.1.0)
+      rack
     ruby2_keywords (0.0.4)
+    sinatra (2.1.0)
+      mustermann (~> 1.0)
+      rack (~> 2.2)
+      rack-protection (= 2.1.0)
+      tilt (~> 2.0)
     telegram-bot-ruby (0.15.0)
       faraday
       inflecto
       virtus
     thread_safe (0.3.6)
+    tilt (2.0.10)
     virtus (1.0.5)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
@@ -52,7 +63,8 @@ DEPENDENCIES
   byebug
   httparty
   nokogiri
+  sinatra
   telegram-bot-ruby
 
 BUNDLED WITH
-   2.2.16
+   2.2.31
