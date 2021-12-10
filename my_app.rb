@@ -1,5 +1,5 @@
 require 'sinatra'
 
 get '/' do
-  redirect 'http://bot_url_from_BotFather', 303
+  redirect 'https://t.me/MySickleBot', 303
 end
