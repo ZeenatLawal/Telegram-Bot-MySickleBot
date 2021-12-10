@@ -1,6 +1,6 @@
 require 'telegram/bot'
 require_relative '../lib/scrapper'
-require 'dotenv'
+# require 'dotenv'
 
 Dotenv.load('token.env')
 
