@@ -1,6 +1,10 @@
 require 'telegram/bot'
 require_relative '../lib/scrapper'
-require './token'
+require 'dotenv'
+
+Dotenv.load('token.env')
+
+TOKEN = ENV['TOKEN']
 
 # rubocop: disable Layout/LineLength
 # rubocop: disable Metrics/CyclomaticComplexity, Metrics/BlockLength
